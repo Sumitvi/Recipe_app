@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body{
+    font-family: sans-serif;
+    background-color: rgb(139, 120, 120);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 40px; */
+    margin: 0 40px  0 40px;
+    padding-top: 18px;
+}
+.navbar h1{
+    color: white;
+}
+header{
+    background-color: rgb(35, 36, 31);
+    height: 55px;
+}
+input{
+    height: 28px;
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    
+}
+.btn{
+    height: 28px;
+    width: 70px;
+    border-radius: 3px;
+    color: rgb(255, 60, 102);
+    background: transparent;
+   
+    border: 1px solid   rgb(255, 60, 102);
+    cursor: pointer;
+}
+.btn:hover{
+    /* background: transparent; */
+    background-color: rgb(255, 60, 102);
+    color: black;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 20%;
+}
+
+@media(max-width:600px){
+    .navbar{
+        display: block;
+        text-align: center;
+    }
+    header{
+        height: 100px;
+    }
+    form{
+        margin-top: 10px;
+    }
+    .heading{
+        margin-top: 30%;
+    }
+
+}
+
+@media (max-width:300px){
+    .btn{
+        height: 28px;
+        width: 50px;
+    }
+    input{
+        width: 100px;
+    }
+}
+/* 
+.recipe{
+    text-align: center;
+    margin: 0 auto;
+} */
+
+.recipe-container{
+    /* text-align: center;
+    margin-top: 2px;
+    display: flex; 
+    justify-content: space-evenly;
+   
+   
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    max-width: 100%;
+    height: auto; */
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    /* margin: 0 auto; */
+    padding: 20px;
+    place-items: center;
+}
+
+.recipe{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78,73,73,0.1),-5 -5px 10px rgba(34,34,34,0.1);
+    cursor: pointer;
+    max-width: 350px;
+
+
+}
+.recipe img{
+    height: 300px;
+}
+
+.recipe h3{
+    font-size: 24px;
+    margin-block: 5px;
+
+}
+
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+
+.recipe span{
+    font-weight: 600;
+}
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color:rgb(255, 60, 102) ;
+    color: black;
+    border:2px solid rgb(255, 60, 102);
+
+}
+
+.recipe button:hover{
+    background: transparent;
+    color: rgb(255, 60, 102);
+}
+
+
+/* for recipe details */
+
+.recipe-details{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    background-color: rgb(153, 149, 149);
+    -webkit-transform: translate(-50%,-50%);
+ 
+    border-radius: 12px;
+    width: 40%;
+    height: 60%;
+    font-size: 20px;
+    overflow-y: scroll;
+    transition: all 0.5 ease-in-out;
+
+}
+
+.recipe:hover{
+    transform: scale(1.1);
+}
+
+.recipeName{
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    /* color: white; */
+    text-transform: uppercase;
+    margin-top: 50px;
+
+}
+
+.ingredients{
+    margin-top: 18px;
+    margin-left: 10px;
+    /* text-transform: uppercase; */
+}
+.recipeList{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.instructionHeading{
+    margin-top: 15px;
+    margin-left: 10px;
+    /* text-transform: uppercase; */
+}
+
+.RecipeInstruction{
+    margin: 15px 10px 15px 10px;
+    white-space: pre-line;
+}
+
+.recipe-close-btn {
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color:rgb(255, 60, 102) ;
+    width: 30px;
+    color: white;
+}
+.recipe-close-btn:hover{
+    background: transparent;
+    border: 2px solid rgb(255, 60, 102) ;
+    color: rgb(255, 60, 102);
+
+}
